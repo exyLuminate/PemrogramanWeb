@@ -1,61 +1,93 @@
-/* Reset dasar */
+/* ===== Reset Dasar ===== */
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
 }
 
-/* Struktur umum */
+/* ===== Struktur Umum ===== */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    scroll-behavior: smooth; /* agar klik link navigasi scroll halus */
+    scroll-behavior: smooth;
+    background: #E0F7FA;
+    color: #222;
 }
 
-/* Header statis */
+/* ===== Header & Navigation - Fix ===== */
 header {
-    position: fixed;
+    position: fixed; /* Biar tetap di atas saat scroll */
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
+    background-color: #e0f2fa;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sedikit bayangan lembut */
     z-index: 1000;
 }
 
-header h1 {
-    font-size: 20px;
+/* ===== Kiri (Nama/Identitas) ===== */
+.header-left {
+    text-align: left;
 }
 
-nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #333;
+.header-left h1 {
+    margin: 0;
+    font-size: 20px;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #007bff;
+.header-left p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
 }
 
-/* Section umum */
+/* ===== Kanan (Navigasi) ===== */
+.header-right {
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+    gap: 20px;
+    flex-wrap: wrap; /* biar gak overflow kalau layar kecil */
+}
+
+.header-right a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #87BFFF; /* Warna saat hover */
+}
+
+/* ===== Section Umum ===== */
 section {
-    padding: 100px 20px;
+    padding: 80px 10%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* ===== Home ===== */
 #home {
-    background-color: #f5f5f5;
     text-align: center;
 }
 
-#skills ul {
-    list-style: none;
+/* ===== Resume ===== */
+#resume h2, #projects h2, #contact h2 {
+    margin-bottom: 20px;
+    color: #7cafe4;
 }
 
-.project {
+/* ===== Project Section ===== */
+.projects {
     margin-bottom: 20px;
 }
 
@@ -63,13 +95,107 @@ section {
     width: 200px;
     height: auto;
     display: block;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 
-/* Footer */
-footer {
+/* ===== Contact Section ===== */
+#contact {
     text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
+}
+
+#contact h2 {
+    margin-bottom: 25px;
+}
+
+/* Form tanpa background atau border */
+#contact form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Label rapi dan halus */
+#contact label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input dan textarea bergaya garis bawah saja */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    color: #222;
+    outline: none;
+}
+
+/* Efek fokus biru lembut */
+#contact input:focus,
+#contact textarea:focus {
+    border-bottom-color: #87CEFA;   /* biru muda lembut */
+}
+
+/* Tombol kirim sederhana */
+#contact button {
+    margin-top: 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* ===== Footer ===== */
+footer {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: auto;
+    border-top: 1px solid #dddd;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-center a {
+    margin: 0 10px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-center a:hover {
+    color: #5a9fd8;
 }

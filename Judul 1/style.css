@@ -1,0 +1,75 @@
+/* Reset dasar */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Struktur umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* agar klik link navigasi scroll halus */
+}
+
+/* Header statis */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Section umum */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#home {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}

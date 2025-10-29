@@ -98,6 +98,8 @@ section {
     margin-bottom: 20px;
 }
 
+.resume-item p {
+text-align: justify;}
 
 /* ===== Project Section ===== */
 .projects {

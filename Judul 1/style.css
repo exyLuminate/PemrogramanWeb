@@ -13,7 +13,7 @@ body {
     color: #222;
 }
 
-/* ===== Header & Navigation - Fix ===== */
+/* ===== Header & Navigation===== */
 header {
     position: fixed; /* Biar tetap di atas saat scroll */
     top: 0;
@@ -68,8 +68,8 @@ header {
 
 /* ===== Section Umum ===== */
 section {
-    padding: 50px 10%;
-    min-height: 100vh;
+    padding: 10px 10%;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

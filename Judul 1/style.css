@@ -106,11 +106,18 @@ text-align: justify;}
     margin-bottom: 20px;
 }
 
-.project img {
-    width: 200px;
+.project-item {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.project-item img {
+    width: 250px;
     height: auto;
     display: block;
     margin: 0 auto 10px;
+    border-radius: 15px;
+    border: 2px solid #161515;
 }
 
 /* ===== Contact Section ===== */

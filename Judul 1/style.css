@@ -80,6 +80,19 @@ section {
     text-align: center;
 }
 
+/* Gaya untuk gambar profil di home */
+.profile-pic {
+    width: 250px;              
+    height: 250px;
+    border-radius: 50%;         
+    object-fit: cover;         
+    display: block;             
+    margin: 0 auto 20px auto;  
+    border: 3px solid #87BFFF;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
 /* ===== Resume ===== */
 #resume h2, #projects h2, #contact h2 {
     margin-bottom: 20px;

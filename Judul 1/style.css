@@ -68,7 +68,7 @@ header {
 
 /* ===== Section Umum ===== */
 section {
-    padding: 80px 10%;
+    padding: 50px 10%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -83,8 +83,8 @@ section {
 /* ===== Resume ===== */
 #resume h2, #projects h2, #contact h2 {
     margin-bottom: 20px;
-    color: #7cafe4;
 }
+
 
 /* ===== Project Section ===== */
 .projects {

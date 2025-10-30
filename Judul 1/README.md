@@ -3,6 +3,7 @@
 Sebuah website portofolio pribadi yang dibuat menggunakan HTML, dan CSS sederhana.  
 Website ini berfungsi sebagai media untuk memperkenalkan diri, menampilkan pengalaman, proyek, serta kontak profesional.
 
+Link : https://exyluminate.github.io/exyLuminate/
 ---
 
 ## 🚀 Fitur Utama

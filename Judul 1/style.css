@@ -1,223 +1,258 @@
-/* ===== Reset Dasar ===== */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
+/* ========== BASE STYLES ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===== Struktur Umum ===== */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    background: #E0F7FA;
-    color: #222;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
 }
 
-/* ===== Header & Navigation===== */
+/* ========== HEADER ========== */
 header {
-    position: fixed; /* Biar tetap di atas saat scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #e0f2fa;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sedikit bayangan lembut */
-    z-index: 1000;
-}
-
-/* ===== Kiri (Nama/Identitas) ===== */
-.header-left {
-    text-align: left;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header-left h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.header-left p {
-    margin: 0;
-    font-size: 14px;
-    color: gray;
-}
-
-/* ===== Kanan (Navigasi) ===== */
-.header-right {
-    display: flex;
-    align-items: center;
-    padding-right: 60px;
-    gap: 20px;
-    flex-wrap: wrap; /* biar gak overflow kalau layar kecil */
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .header-right a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .header-right a:hover {
-    color: #87BFFF; /* Warna saat hover */
+color:#357ABD}
+
+/* ========== SECTION LAYOUT ========== */
+.section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-/* ===== Section Umum ===== */
-section {
-    padding: 10px 10%;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.section-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+
 }
 
-/* ===== Home ===== */
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* ========== HOME SECTION ========== */
 #home {
-    text-align: center;
+  background: linear-gradient(180deg, #E3F2FD 0%, #FFFFFF 100%);
 }
 
-/* Gaya untuk gambar profil di home */
 .profile-pic {
-    width: 250px;              
-    height: 250px;
-    border-radius: 50%;         
-    object-fit: cover;         
-    display: block;             
-    margin: 0 auto 20px auto;  
-    border: 3px solid #87BFFF;  
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #E3F2FD;
 }
 
-
-/* ===== Resume ===== */
-#resume h2, #projects h2, #contact h2 {
-    margin-bottom: 20px;
+.lead {
+  font-size: 18px;
 }
 
-.resume-item p {
-text-align: justify;}
+/* ========== RESUME SECTION ========== */
+#resume {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E8F5E9 100%);
+}
 
-/* ===== Project Section ===== */
-.projects {
-    margin-bottom: 20px;
+.resume-entry {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.resume-entry, .project-content p {
+  text-align: justify;
+}
+
+.entry-meta {
+  font-weight: 600;
+  margin-bottom: 6px; 
+}
+
+.muted {
+  color: #666;
+  font-weight: 400;
+}
+
+.resume-skills {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.skill-chip {
+  background: #E3F2FD;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ========== PROJECT SECTION ========== */
+#projects {
+  background: linear-gradient(180deg, #E8F5E9 0%, #E8EAF6 100%);
 }
 
 .project-item {
-    margin-bottom: 30px;
-    text-align: justify;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 
-.project-item img {
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-    border-radius: 15px;
-    border: 2px solid #161515;
+.project-image {
+  flex-shrink: 0;
+  border-radius: 12px;  
+  overflow: hidden;
 }
 
-/* ===== Contact Section ===== */
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Pembeda gambar landscape sama potrait */
+.project-image.portrait {
+  width: 160px;
+  height: auto;
+}
+
+.project-image.landscape {
+  width: 420px;
+  height: 260px;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-meta {
+  font-size: 14px;
+  color:#444040;
+  margin-bottom: 10px;
+}
+
+/* ========== CONTACT SECTION ========== */
 #contact {
-    text-align: center;
+  background: linear-gradient(180deg, #E8EAF6 0%, #FFF3E0 100%);
 }
 
-#contact h2 {
-    margin-bottom: 25px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
 }
 
-/* Form tanpa background atau border */
-#contact form {
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 10px 0;
-}
-
-/* Label rapi dan halus */
-#contact label {
-    display: block;
-    text-align: left;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-/* Input dan textarea bergaya garis bawah saja */
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 10px 5px;
+.contact-form input,
+.contact-form textarea {
+   width: 100%;
     border: none;
     border-bottom: 2px solid #ccc;
     background: transparent;
     font-size: 14px;
     transition: all 0.3s ease;
-    font-family: inherit;
     color: #222;
     outline: none;
 }
 
-/* Efek fokus biru lembut */
 #contact input:focus,
 #contact textarea:focus {
     border-bottom-color: #87CEFA;   /* biru muda lembut */
 }
 
-/* Tombol kirim sederhana */
-#contact button {
-    margin-top: 25px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.btn-primary {
+  color: #007bff;
+  border: 1px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
-#contact button:hover {
-    background-color: #0056b3;
+.btn-primary:hover {
+  background-color: #5ad4f3;
 }
 
-/* ===== Footer ===== */
+
+/* ========== FOOTER ========== */
 footer {
-    padding: 25px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    margin-top: auto;
-    border-top: 1px solid #dddd;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-    flex: 1;
+footer a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+color: #5a9fd8;}
+
+footer p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
     text-align: center;
-    margin: 0 10px;
-}
+  }
 
-.footer-left {
-    text-align: left;
-}
+  .project-content {
+    text-align: center;
+  }
 
-.footer-right {
-    text-align: right;
-}
-
-.footer-center a {
-    margin: 0 10px;
-    color: #000;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.footer-center a:hover {
-    color: #5a9fd8;
+  .project-image.portrait,
+  .project-image.landscape {
+    width: 100%;
+    height: auto;
+  }
 }
